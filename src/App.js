@@ -20,14 +20,34 @@ export default function App() {
   return (
     <div className="App">
       <h4>Traffic Light</h4>
-      <div className="traffic-lights">
+      <div className="traffic-lights" key="lights">
         {trafficLights.map((light) => (
-          <div>
-            <div className={light === signal ? signal : "gray"}>
+          <div key={`traffic-signal-${light}`}>
+            <div
+              className={light === signal ? signal : "gray"}
+              key={`signal-${light}`}
+            >
               {light === signal ? signal : "gray"}
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="selector">
+        <label>Change the signal:</label>
+        <select
+          value={signal}
+          onChange={(e) => {
+            console.log("val", e.target.value);
+            setSignal(e.target.value);
+          }}
+        >
+          {trafficLights.map((light) => (
+            <option value={light} key={light}>
+              {light}
+            </option>
+          ))}
+        </select>
       </div>
     </div>
   );
