@@ -48,8 +48,22 @@ body {
   border-radius: 30px;
 }
 
-.gray {
-  background-color: gray;
+.gray-red {
+  background-color: rgb(167, 109, 109);
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+}
+
+.gray-yellow {
+  background-color: rgb(219, 224, 161);
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+}
+
+.gray-green {
+  background-color: rgb(125, 159, 140);
   width: 50px;
   height: 50px;
   border-radius: 30px;
@@ -60,6 +74,33 @@ body {
   flex-direction: column;
 }
 
-label{
+label {
   margin-bottom: 3px;
+}
+
+.custom-signal {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+
+  input,
+  select {
+    width: 200px;
+  }
+
+  button {
+    background-color: lightblue;
+    border: 0;
+    border-radius: 3px;
+  }
+}
+
+.active {
+  color: blue;
+  cursor: pointer;
+}
+
+.disabled {
+  color: gray;
+  cursor: not-allowed;
 }
