@@ -10,6 +10,7 @@ This small React code implements a traffic light simulation that cycles through 
 The user interface consists of:
 
 > A display of the current traffic lights.
+
 > A selector to choose a new signal and set a custom timer.
 
 This interactive component effectively simulates traffic light functionality with an option for customization.
